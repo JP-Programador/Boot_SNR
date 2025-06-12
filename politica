@@ -1,0 +1,30 @@
+1.	Autenticação Forte
+Todos os usuários devem utilizar autenticação segura para acesso ao sistema, preferencialmente com autenticação multifator (MFA), especialmente para áreas administrativas.
+
+2.	Proteção de Dados Pessoais (LGPD)
+Dados sensíveis como CPF, endereço e telefone dos clientes devem ser criptografados em repouso e em trânsito. O acesso a essas informações devem ser auditadas e controladas.
+
+3.	Criptografia de Dados em Trânsito
+Toda comunicação entre clientes e servidores deve utilizar HTTPS com certificados válidos, garantindo que dados trafeguem de forma segura.
+
+4.	Auditoria e Registro de Ações
+Todas as ações relevantes dos usuários, como criação de relatos, alterações em planos ou categorias, devem ser registradas em logs para auditoria e investigação de incidentes.
+
+5.	Política de Backup
+Backups automáticos devem ser realizados regularmente e armazenados em local seguro. Deve haver política de retenção e testes periódicos de recuperação.
+
+6.	Atualizações e Patches
+O sistema e seus componentes devem ser atualizados regularmente com os patches de segurança recomendados para evitar vulnerabilidades conhecidas.
+
+7.	Política de Exclusão e Anonimização
+Dados de clientes inativos ou que solicitarem exclusão devem ser removidos ou anonimizados conforme a legislação vigente (como LGPD).
+
+8.	Prevenção contra Injeção de SQL
+O sistema deve utilizar queries parametrizadas ou ORM para evitar vulnerabilidades como SQL Injection, especialmente nas áreas de cadastro e login.
+
+
+9.	Sessões e Expiração Automática
+Sessões de usuários devem ter tempo limite de inatividade configurado e encerramento automático após esse período, prevenindo acessos indevidos em dispositivos não supervisionados.
+
+10.	Gestão de Incidentes
+Deve existir um plano formal de resposta a incidentes, definindo como identificar, conter, resolver e documentar falhas de segurança ou acessos não autorizados. Isso inclui comunicação com usuários e autoridades, se necessário.

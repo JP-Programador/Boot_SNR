@@ -1,0 +1,28 @@
+| Tabela            | Campo            | Tipo            | Chave    | Descrição                                                                 |
+|-------------------|------------------|------------------|----------|---------------------------------------------------------------------------|
+| TipoCategoria     | id               | INT              | PK       | Identificador único da categoria                                          |
+| TipoCategoria     | nome             | VARCHAR(100)     |          | Nome da categoria de tipo                                                 |
+| TipoCategoria     | descricao        | TEXT             |          | Descrição detalhada da categoria                                          |
+| Categoria         | nome             | VARCHAR(100)     | PK       | Nome da categoria (identificador único)                                   |
+| Categoria         | nome_amigavel    | VARCHAR(150)     |          | Nome mais legível para exibição ao usuário                                |
+| Categoria         | tipo_id          | INT              | FK       | Referência ao tipo da categoria (TipoCategoria.id)                        |
+| Plano             | nome             | VARCHAR(100)     | PK       | Nome do plano (único)                                                     |
+| PlanoCategoria    | plano_nome       | VARCHAR(100)     | PK, FK   | Nome do plano (referência à Plano.nome)                                   |
+| PlanoCategoria    | categoria_nome   | VARCHAR(100)     | PK, FK   | Nome da categoria (referência à Categoria.nome)                           |
+| Cliente           | cpf              | VARCHAR(11)      | PK       | CPF do cliente (identificador único)                                      |
+| Cliente           | nome             | VARCHAR(100)     |          | Nome completo do cliente                                                  |
+| Cliente           | endereco         | VARCHAR(200)     |          | Endereço do cliente                                                       |
+| Cliente           | telefone         | VARCHAR(15)      |          | Telefone de contato                                                       |
+| Cliente           | plano_nome       | VARCHAR(100)     | FK       | Nome do plano contratado (Plano.nome)                                     |
+| Relato            | id               | INT              | PK       | Identificador único do relato                                             |
+| Relato            | cpf_cliente      | VARCHAR(11)      | FK       | CPF do cliente que fez o relato (Cliente.cpf)                             |
+| Relato            | descricao        | TEXT             |          | Texto do relato                                                           |
+| Relato            | categoria_nome   | VARCHAR(100)     | FK       | Categoria do relato (Categoria.nome)                                      |
+| RespostaAutomatica| id               | INT              | PK       | Identificador da resposta automática                                      |
+| RespostaAutomatica| relato_id        | INT              | FK       | Relato associado (Relato.id)                                              |
+| RespostaAutomatica| resposta         | TEXT             |          | Texto da resposta automática                                              |
+| RespostaAutomatica| data_hora        | DATETIME         |          | Data e hora da resposta automática                                        |
+| Protocolo         | numero           | VARCHAR(20)      | PK       | Número do protocolo (identificador único)                                 |
+| Protocolo         | data_hora        | DATETIME         |          | Data e hora do protocolo                                                  |
+| Protocolo         | status           | VARCHAR(50)      |          | Status atual do protocolo (ex: Aberto, Resolvido, etc.)                   |
+| Protocolo         | resposta_id      | INT              | FK       | Resposta relacionada (RespostaAutomatica.id)                              |

@@ -1,0 +1,46 @@
+**Quantidade:** 8 unidades (usos admistrativos)
+**Hardware:**
+- Intel Core i5 10 geração
+- 8 GB RAM
+- SSD 500 GB
+
+**Sistema Operacional:**
+- Windows 11 Pro ou Ubuntu 22.04 LTS
+
+**Programas Essenciais:**
+- Navegador (Google Chrome ou Mozilla Firefox)
+- Pacote Office (Microsoft Office ou LibreOffice)
+- Antivírus corporativo (Kaspersky, ESET, etc.)
+- Ferramentas de comunicação (Microsoft Teams, Zoom, etc.)
+- Leitor de PDF (Adobe Reader ou similar)
+
+**Configurações de Rede:**
+- DHCP com reservas (por MAC Address)
+- Nome de host padrão: `TI-PC01`, `TI-PC02`, etc.
+
+## 🖥️ Servidor Principal
+
+**Hardware:**
+- Intel Xeon ou AMD EPYC
+- 64 GB RAM
+- SSD para sistema + HDs com RAID para dados
+
+**Sistema Operacional:**
+- Windows Server 2022 ou Ubuntu Server
+
+**Rede:**
+- IP Fixo: `192.168.1.10`
+- Hostname: `TI-SERVER`
+
+## 🌐 Estrutura de Rede
+
+**IP:**
+
+| Dispositivo           | IP Sugerido          |
+|-----------------------|----------------------|
+| Roteador              | 192.168.1.1          |
+| Servidor Principal    | 192.168.1.10         |
+| Impressoras de Rede   | 192.168.1.20–30      |
+| Estações (reservadas) | 192.168.1.100–150    |
+| DHCP Geral            | 192.168.1.200–250    |
+| VPN                   | 10.8.0.0/24 (externo)|
