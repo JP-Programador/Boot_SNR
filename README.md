@@ -1,4 +1,5 @@
-# Boot_SNR
+# Boot_SRN - Sistema de Gestão Inteligente de Ocorrência
+
 
 Este projeto tem como objetivo implementar um sistema inteligente para empresas de seguro residencial, focado na triagem e atendimento inicial de relatos de clientes. A solução inclui um **bot automatizado**, capaz de:
 
